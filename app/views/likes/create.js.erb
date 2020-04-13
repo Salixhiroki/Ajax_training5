@@ -1,0 +1,2 @@
+$('#likes_buttons_<%= @blog.id %>').html("<%= j(render partial: 'likes/like', locals: {blog: @blog}) %>");
+console.log("<%= @blog %>");

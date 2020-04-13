@@ -1,0 +1,17 @@
+<div class="main_contents">
+    
+  <% @blogs.each do |blog| %>
+    <div class="blog_contents">
+      <h2><%= link_to blog.title,blog_path(blog.id) %></h2>
+      <%= blog.body %>
+      
+      <div id="likes_buttons_<%= blog.id %>">
+        <%= render partial: "likes/like", locals: {blog: blog} %>
+      </div>
+    </div>
+  <% end %>
+</div>
+        
+        
+        
+        
